@@ -17,6 +17,7 @@ def http_trigger_pi(req: func.HttpRequest) -> func.HttpResponse:
     if not count:
         return func.HttpResponse("Please pass aa 'count' parameter.", status_code=400)
 
+<<<<<<< HEAD
     try:
         registry_manager = IoTHubRegistryManager(CONNECTION_STRING)
 
@@ -26,3 +27,12 @@ def http_trigger_pi(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse(f"Sent blink command: {count}")
     except Exception as e:
         return func.HttpResponse(f"Error: {str(e)}", status_code=500)
+=======
+    if name:
+        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
+    else:
+        return func.HttpResponse(
+             "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
+             status_code=200
+        )
+>>>>>>> parent of bb0af0a (Update function_app.py)
