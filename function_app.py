@@ -15,7 +15,7 @@ def http_trigger_pi(req: func.HttpRequest) -> func.HttpResponse:
 
     count = req.params.get('count')
     if not count:
-        return func.HttpResponse("Please pass a 'count' parameter.", status_code=400)
+        return func.HttpResponse("Please pass aa 'count' parameter.", status_code=400)
 
     try:
         registry_manager = IoTHubRegistryManager(CONNECTION_STRING)
