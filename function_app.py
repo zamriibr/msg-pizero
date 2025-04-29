@@ -1,7 +1,7 @@
 import azure.functions as func
 import logging
 import os
-from azure.iot.hub import IoTHubRegistryManager # type: ignore
+from azure.iot.hub import IoTHubRegistryManager
 
 CONNECTION_STRING = os.environ["DEVICE_CONNECTION_STRING"]
 DEVICE_ID = os.environ["DEVICE_ID"]
